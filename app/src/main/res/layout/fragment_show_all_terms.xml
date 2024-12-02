@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.ShowAllTermsFragment">
+
+    <TextView
+        android:id="@+id/tvHeaderAllTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGrey"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Basic Terms"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDescAllTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGrey"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="Terms related to the basic data of the contract"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/dividerAllTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:translationZ="90dp"
+        app:dividerColor="#68BCB9"
+        app:dividerThickness="4dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAllTermsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingTop="15dp"
+        />
+
+</LinearLayout>

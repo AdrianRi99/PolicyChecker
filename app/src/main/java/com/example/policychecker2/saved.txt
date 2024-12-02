@@ -1,0 +1,22 @@
+package com.example.policychecker2
+
+fun main() {
+
+    val people = listOf(
+        Person("jim", 2, "2.1"),
+        Person("hans", 1, "1.1"),
+        Person("blue", 1, "1.1"),
+        Person("tom", 1, "1.2"),
+        Person("ben", 3, "3.2")
+    ).sortedBy { it.id }.distinctBy {
+        it.type
+    }
+
+    people.forEach {
+        println(it.name)
+    }
+
+}
+
+
+class Person(val name: String, val id: Int, val type: String) //type - if things are of same type -> remove duplicates

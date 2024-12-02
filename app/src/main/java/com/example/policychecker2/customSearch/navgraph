@@ -1,0 +1,29 @@
+<fragment
+        android:id="@+id/showTextFragment"
+        android:name="com.example.policychecker2.ui.fragments.ShowTextFragment"
+        android:label="fragment_show_text"
+        tools:layout="@layout/fragment_show_text" >
+        <argument
+            android:name="content"
+            app:argType="string" />
+        <argument
+            android:name="resultsFound"
+            app:argType="com.example.policychecker2.db.models.terms.TermsBaseClass[]" />
+        <argument
+            android:name="customResults"
+            app:argType="com.example.policychecker2.db.models.terms.CustomTermsBaseClass[]" />
+
+        <argument
+            android:name="scrollTo"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="scrollTerm"
+            app:argType="com.example.policychecker2.db.models.terms.TermsBaseClass"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="pdfFileTitle"
+            app:argType="string" />
+
+    </fragment>

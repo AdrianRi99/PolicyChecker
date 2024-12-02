@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content">-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_item_results_cl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    android:paddingBottom="15dp">
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/row_item_results"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:backgroundTint="@color/lightBlack"
+    app:strokeWidth="2dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="3dp">
+
+<!--    android:paddingStart="5dp"-->
+<!--    android:paddingEnd="5dp"-->
+<!--    app:cardBackgroundColor="@color/lightBlue"-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="-54dp">
+
+
+        <TextView
+            android:id="@+id/tvDangerousTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="DANGEROUS TERM"
+            android:textColor="@color/lightWhite"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icDropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-15dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvDangerousTerm"
+            app:layout_constraintStart_toStartOf="@+id/tvDangerousTerm"
+            app:layout_constraintTop_toBottomOf="@+id/tvDangerousTerm"
+            app:srcCompat="@drawable/ic_drop_down_arrow"
+            app:tint ="@color/lightWhite"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/expandedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDangerousTerm"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/tvTermEasyTranslation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="TextView"
+                android:textColor="@color/lightWhite"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <com.google.android.material.divider.MaterialDivider-->
+<!--                android:id="@+id/dividerResultItem"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:translationZ="90dp"-->
+<!--                app:dividerColor="@color/black"-->
+<!--                app:dividerThickness="2dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tvTermEasyTranslation"-->
+<!--                tools:layout_editor_absoluteX="0dp" />-->
+
+            <Button
+                android:id="@+id/btnSearchInText"
+                style="@style/customButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="SHOW IN TEXT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/spinnerResultItem"
+                app:layout_constraintTop_toBottomOf="@+id/tvTermEasyTranslation" />
+
+            <Spinner
+                android:id="@+id/spinnerResultItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnSearchInText"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnSearchInText"
+                app:tint="@color/lightBlack" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvCounterOccurences"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:paddingStart="10dp"-->
+<!--                android:paddingEnd="10dp"-->
+<!--                android:text="0 Occurences"-->
+<!--                android:textColor="@color/lightWhite"-->
+<!--                android:textSize="16sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/dividerResultItem" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <View-->
+<!--        android:id="@+id/borderView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_margin="0dp"-->
+<!--        border-->
+<!--        android:background="@android:color/holo_red_light"-->
+<!--        android:layout_alignStart="@id/row_item_results"-->
+<!--        android:layout_alignTop="@id/row_item_results"-->
+<!--        android:layout_alignEnd="@id/row_item_results"-->
+<!--        android:layout_alignBottom="@id/row_item_results"/>-->
+
+<!--</RelativeLayout>-->

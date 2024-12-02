@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.SavedResultsFragment">
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:text="RESULTS FOUND:"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="@color/lightGrey"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvResultsFound"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:text="0"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/lightGrey"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/textView3"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/textView3" />-->
+
+
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvSavedResultFragment"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:clipToPadding="false"-->
+<!--            android:paddingTop="15dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/view" />-->
+
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/scrollView"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout"
+                    tools:context=".MainActivity">
+
+                        <LinearLayout
+                            android:id="@+id/category1"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                                <TextView
+                                    android:id="@+id/tvHeader"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Basic Terms"
+                                    android:textSize="24sp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="5dp"
+                                    android:textColor="@color/lightWhite"
+                                    android:background="@color/lightBlack"
+                                    android:textStyle="bold"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tvHeaderDesc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Terms related to the basic data of the contract"
+                                    android:textColor="@color/lightWhite"
+                                    android:textSize="15sp"
+                                    android:paddingBottom="10dp"
+                                    android:background="@color/lightBlack"
+                                    />
+
+<!--                                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@color/lightBlack"-->
+<!--                                    android:paddingBottom="10dp">-->
+
+<!--                                        <Button-->
+<!--                                            android:id="@+id/btnShowAllTerms"-->
+<!--                                            style="@style/customButton"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                            android:text="SHOW ALL"/>-->
+
+<!--                                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:id="@+id/divider"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:translationZ="90dp"
+                                    android:layout_marginBottom="15dp"
+                                    app:dividerColor="#70B0FF"
+                                    app:dividerThickness="4dp"
+                                    />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/category2"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                                <TextView
+                                    android:id="@+id/tvHeader2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Dangerous Terms"
+                                    android:textSize="24sp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="5dp"
+                                    android:textColor="@color/lightWhite"
+                                    android:background="@color/lightBlack"
+                                    android:textStyle="bold"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tvHeaderDesc2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Terms that can work to your disadvantage"
+                                    android:textColor="@color/lightWhite"
+                                    android:textSize="15sp"
+                                    android:paddingBottom="10dp"
+                                    android:background="@color/lightBlack"
+                                    />
+
+
+<!--                                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@color/lightBlack"-->
+<!--                                    android:paddingBottom="10dp">-->
+
+<!--                                        <Button-->
+<!--                                            android:id="@+id/btnShowAllTerms2"-->
+<!--                                            style="@style/customButton"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                            android:text="SHOW ALL"/>-->
+
+<!--                                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:id="@+id/divider2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:translationZ="90dp"
+                                    android:layout_marginBottom="15dp"
+                                    app:dividerColor="#F86A80"
+                                    app:dividerThickness="4dp"
+                                    />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/category3"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                                <TextView
+                                    android:id="@+id/tvHeader3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Invalid Terms"
+                                    android:textSize="24sp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="5dp"
+                                    android:textColor="@color/lightWhite"
+                                    android:background="@color/lightBlack"
+                                    android:textStyle="bold"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tvHeaderDesc3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Terms that do not comply with the law"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/lightWhite"
+                                    android:paddingBottom="10dp"
+                                    android:background="@color/lightBlack"
+                                    />
+
+<!--                                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@color/lightBlack"-->
+<!--                                    android:paddingBottom="10dp"-->
+<!--                                    tools:layout_editor_absoluteY="77dp">-->
+
+<!--                                        <Button-->
+<!--                                            android:id="@+id/btnShowAllTerms3"-->
+<!--                                            style="@style/customButton"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:text="SHOW ALL"-->
+<!--                                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                                <com.google.android.material.divider.MaterialDivider
+                                    android:id="@+id/divider3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:translationZ="90dp"
+                                    android:layout_marginBottom="15dp"
+                                    app:dividerColor="#FFBB86FC"
+                                    app:dividerThickness="4dp"
+                                    />
+
+                        </LinearLayout>
+
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/category4"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            >-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/tvHeader4"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:text="Custom Terms"-->
+<!--                                    android:textSize="24sp"-->
+<!--                                    android:paddingTop="10dp"-->
+<!--                                    android:paddingBottom="5dp"-->
+<!--                                    android:textColor="@color/lightWhite"-->
+<!--                                    android:background="@color/lightBlack"-->
+<!--                                    android:textStyle="bold"-->
+<!--                                    />-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/tvHeaderDesc4"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:text="Define your own terms"-->
+<!--                                    android:textSize="15sp"-->
+<!--                                    android:textColor="@color/lightWhite"-->
+<!--                                    android:paddingBottom="10dp"-->
+<!--                                    android:background="@color/lightBlack"-->
+<!--                                    />-->
+
+<!--                                <EditText-->
+<!--                                    android:id="@+id/editTextOwnTerms"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:textSize="20sp"-->
+<!--                                    android:layout_marginBottom="8dp"-->
+<!--                                    android:ems="10"-->
+<!--                                    android:hint="Define your own terms"-->
+<!--                                    android:background="@color/lightBlack"-->
+<!--                                    android:textColor="@color/lightWhite"-->
+
+<!--                                    android:inputType="textPersonName"-->
+<!--                                   />-->
+
+<!--                                <Button-->
+<!--                                    android:id="@+id/btnAddCustomTerms"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginStart="8dp"-->
+<!--                                    android:text="ADD"-->
+<!--                                    style="@style/customButton"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                                    app:layout_constraintStart_toEndOf="@+id/editTextOwnTerms"-->
+<!--                                    app:layout_constraintTop_toTopOf="@+id/editTextOwnTerms" />-->
+
+<!--                                <Button-->
+<!--                                    android:id="@+id/btnSearchCustomTerms"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginStart="8dp"-->
+<!--                                    android:text="SEARCH"-->
+<!--                                    style="@style/customButton"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                                    app:layout_constraintStart_toEndOf="@+id/editTextOwnTerms"-->
+<!--                                    app:layout_constraintTop_toTopOf="@+id/editTextOwnTerms" />-->
+
+
+<!--                                <com.google.android.material.divider.MaterialDivider-->
+<!--                                    android:id="@+id/divider4"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:translationZ="90dp"-->
+<!--                                    android:layout_marginBottom="15dp"-->
+<!--                                    app:dividerColor="#B5901F"-->
+<!--                                    app:dividerThickness="4dp"-->
+<!--                                    />-->
+
+<!--                        </LinearLayout>-->
+
+                </LinearLayout>
+
+        </ScrollView>
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:translationZ="90dp"
+            app:dividerColor="@color/lightGrey"
+            app:dividerThickness="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnOpenText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnOpenText"
+            style="@style/customButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="8dp"
+            android:text="OPEN TEXT"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextOwnTerms"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Define your own terms"-->
+<!--            android:inputType="textPersonName"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/btnSearchOwnTerms"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnSearchOwnTerms"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:text="SEARCH"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/editTextOwnTerms"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/editTextOwnTerms" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -1,0 +1,21 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+
+
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    &lt;!&ndash; Dunkler Hintergrund &ndash;&gt;-->
+<!--    <item android:drawable="#1F1F1F" />-->
+
+<!--    &lt;!&ndash; Blauer Bereich (untere 10%) &ndash;&gt;-->
+<!--    <item android:bottom="@dimen/bottom_10_percent">-->
+<!--        <clip>-->
+<!--            <shape>-->
+<!--                <gradient-->
+<!--                    android:angle="90"-->
+<!--                    android:startColor="#4E62BE"-->
+<!--                    android:centerColor="#4E62BE"-->
+<!--                    android:endColor="#1F1F1F"-->
+<!--                    android:type="linear" />-->
+<!--            </shape>-->
+<!--        </clip>-->
+<!--    </item>-->
+<!--</layer-list>-->

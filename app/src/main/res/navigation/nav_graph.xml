@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.policychecker2.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_showPdfFragment"
+            app:destination="@id/showPdfFragment" />
+        <argument
+            android:name="scrollToBottom"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_homeFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/showPdfFragment"
+        android:name="com.example.policychecker2.ui.fragments.ShowPdfFragment"
+        android:label="fragment_show_pdf"
+        tools:layout="@layout/fragment_show_pdf" >
+
+        <argument
+            android:name="uri"
+            app:argType="android.net.Uri"
+            app:nullable="true" />
+        <argument
+            android:name="pdfFileTitle"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_showPdfFragment_to_loadingAndScanningFragment"
+            app:destination="@id/loadingAndScanningFragment"
+            app:popUpTo="@id/showPdfFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.example.policychecker2.ui.fragments.ResultsFragment"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" >
+
+        <argument
+            android:name="content"
+            app:argType="string" />
+        <argument
+            android:name="resultsFound"
+            app:argType="com.example.policychecker2.db.models.terms.TermsBaseClass[]" />
+        <argument
+            android:name="pdfFileTitle"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_resultsFragment_to_homeFragment2"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_resultsFragment_to_showTextFragment"
+            app:destination="@id/showTextFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/showTextFragment"
+        android:name="com.example.policychecker2.ui.fragments.ShowTextFragment"
+        android:label="fragment_show_text"
+        tools:layout="@layout/fragment_show_text" >
+        <argument
+            android:name="content"
+            app:argType="string" />
+        <argument
+            android:name="resultsFound"
+            app:argType="com.example.policychecker2.db.models.terms.TermsBaseClass[]" />
+        <argument
+            android:name="scrollTo"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="scrollTerm"
+            app:argType="com.example.policychecker2.db.models.terms.TermsBaseClass"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="pdfFileTitle"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/savedResultsFragment"
+        android:name="com.example.policychecker2.ui.fragments.SavedResultsFragment"
+        android:label="fragment_saved_results"
+        tools:layout="@layout/fragment_saved_results" >
+        <argument
+            android:name="content"
+            app:argType="string" />
+        <argument
+            android:name="resultsFound"
+            app:argType="com.example.policychecker2.db.models.terms.TermsBaseClass[]" />
+        <argument
+            android:name="pdfFileTitle"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingAndScanningFragment"
+        android:name="com.example.policychecker2.ui.fragments.LoadingAndScanningFragment"
+        android:label="fragment_loading_and_scanning"
+        tools:layout="@layout/fragment_loading_and_scanning" >
+        <argument
+            android:name="uri"
+            app:argType="android.net.Uri"
+            app:nullable="true" />
+        <argument
+            android:name="pdfFileTitle"
+            app:argType="string" />
+        <argument
+            android:name="spinnerFileType"
+            app:argType="string" />
+        <argument
+            android:name="spinnerLanguage"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_loadingAndScanningFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment"
+            app:popUpTo="@id/loadingAndScanningFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+</navigation>
